@@ -1,0 +1,25 @@
+﻿@model Scanner.Models.DealWithUI
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="col-md-offset-2 col-md-1">
+        @Html.TextAreaFor(model => model.text, new
+        {
+        htmlAttributes = new
+        {
+        @class = "Formtext",
+        @rows="5",
+        @id ="textArea"
+        }
+        })
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Scan" class="btn btn-success " onclick="javascript: return CloseWindow();" />
+        </div>
+    </div>
+}
+
