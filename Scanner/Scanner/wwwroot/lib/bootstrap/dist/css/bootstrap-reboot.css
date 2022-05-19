@@ -290,7 +290,7 @@ textarea {
   margin: 0;
   font-family: inherit;
   font-size: inherit;
-  line-height: inherit;
+
 }
 
 button,
@@ -332,7 +332,7 @@ button:not(:disabled),
 }
 
 textarea {
-  resize: vertical;
+height:500px; 
 }
 
 fieldset {

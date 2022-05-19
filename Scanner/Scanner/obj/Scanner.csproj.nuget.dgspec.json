@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\devah\\Desktop\\Compiler\\Scanner\\Scanner\\Scanner.csproj": {}
+    "C:\\Users\\Yahia\\Source\\Repos\\AhmedHatemS\\Compiler\\Scanner\\Scanner\\Scanner.csproj": {}
   },
   "projects": {
-    "C:\\Users\\devah\\Desktop\\Compiler\\Scanner\\Scanner\\Scanner.csproj": {
+    "C:\\Users\\Yahia\\Source\\Repos\\AhmedHatemS\\Compiler\\Scanner\\Scanner\\Scanner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\devah\\Desktop\\Compiler\\Scanner\\Scanner\\Scanner.csproj",
+        "projectUniqueName": "C:\\Users\\Yahia\\Source\\Repos\\AhmedHatemS\\Compiler\\Scanner\\Scanner\\Scanner.csproj",
         "projectName": "Scanner",
-        "projectPath": "C:\\Users\\devah\\Desktop\\Compiler\\Scanner\\Scanner\\Scanner.csproj",
-        "packagesPath": "C:\\Users\\devah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\devah\\Desktop\\Compiler\\Scanner\\Scanner\\obj\\",
+        "projectPath": "C:\\Users\\Yahia\\Source\\Repos\\AhmedHatemS\\Compiler\\Scanner\\Scanner\\Scanner.csproj",
+        "packagesPath": "C:\\Users\\Yahia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Yahia\\Source\\Repos\\AhmedHatemS\\Compiler\\Scanner\\Scanner\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\devah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Yahia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

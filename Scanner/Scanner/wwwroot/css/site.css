@@ -16,3 +16,15 @@ html {
 body {
   margin-bottom: 60px;
 }
+textarea {
+    width: 50%;
+    resize: none !important;
+    height: 550px;
+
+}
+
+input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

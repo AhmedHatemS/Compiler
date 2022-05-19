@@ -3023,9 +3023,13 @@ textarea.form-control-lg {
 }
 
 .btn-success {
-  color: #fff;
-  background-color: #198754;
-  border-color: #198754;
+    color: #fff;
+    background-color: #198754;
+    border-color: #198754;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative !important;
 }
 .btn-success:hover {
   color: #fff;

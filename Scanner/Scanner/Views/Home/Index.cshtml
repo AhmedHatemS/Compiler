@@ -5,21 +5,25 @@
 
 @using (Html.BeginForm())
 {
-    <div class="col col-12">
+    <div class="col col-12" width="90%">
         @Html.TextAreaFor(model => model.text,  new
         {
             htmlAttributes = new
             {
+                style = "max-width:100% !important;",
                 @class = "Formtext btn-danger",
-                @rows="60",
+                @rows="600",
                 @cols="50",
-                @id ="textArea"
+                @id ="textArea",
+ 
             }
         })
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Scan" class="btn btn-success " onclick="javascript: return CloseWindow();" />
+            <input type="submit" value="Scan" class="btn btn-success " style="display: block;
+    margin-left: auto;
+    margin-right: auto;"  onclick="javascript: return CloseWindow();" />
         </div>
     </div>
 }
