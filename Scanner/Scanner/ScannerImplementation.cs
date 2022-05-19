@@ -5,7 +5,7 @@
         Dictionary<string, string> tokensTable = new Dictionary<string, string>();
         public List<OutputItems> outputTokensList = new List<OutputItems>();
         public List<OutputItems> outputErrorsList = new List<OutputItems>();
-        public string[,] transitionTable = new string[138, 58];        
+        public string[,] transitionTable = new string[138, 59];        
         public string inputText = "";
         string checkedString = "";
         public int nOfErrors = 0;
@@ -22,7 +22,7 @@
              {
                  for(int i = 0; i < 138; i++)
                  {
-                     for(int j = 0; j < 58; j++)
+                     for(int j = 0; j < 59; j++)
                      {
                          transitionTable[i,j] = "0";
                      }
@@ -77,6 +77,7 @@
                  transitionTable[0, ++col] = "|";
                  transitionTable[0, ++col] = "=";
                  transitionTable[0, ++col] = "!";
+                 transitionTable[0, ++col] = ";";
                  transitionTable[0, ++col] = ".";
                  transitionTable[0, ++col] = "{";
                  transitionTable[0, ++col] = "}";
@@ -409,7 +410,10 @@
                  transitionTable[123, col] = "174";
                  col++;
                  transitionTable[1, col] = "170";
-                 col++;
+                col++;
+                transitionTable[1, col] = "204";
+                col++;
+                 transitionTable[1, col] = "203";
                  transitionTable[125, col] = "178";
                  col++;
                  transitionTable[1, col] = "182";
