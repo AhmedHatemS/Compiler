@@ -5,15 +5,16 @@
 
 @using (Html.BeginForm())
 {
-    <div class="col-md-offset-2 col-md-1">
-        @Html.TextAreaFor(model => model.text, new
+    <div class="col col-12">
+        @Html.TextAreaFor(model => model.text,  new
         {
-        htmlAttributes = new
-        {
-        @class = "Formtext",
-        @rows="5",
-        @id ="textArea"
-        }
+            htmlAttributes = new
+            {
+                @class = "Formtext btn-danger",
+                @rows="60",
+                @cols="50",
+                @id ="textArea"
+            }
         })
     </div>
     <div class="form-group">

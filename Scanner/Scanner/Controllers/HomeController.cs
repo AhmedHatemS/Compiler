@@ -22,31 +22,19 @@ namespace Scanner.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public IActionResult Index(DealWithUI model)
         {
-            ScannerImplementation scannerImplementation = new ScannerImplementation(model.text);
+            return RedirectToAction("Scan", new {input = model.text});
+        }
 
+        public IActionResult Scan(string input)
+        {
+            ScannerImplementation scannerImplementation = new ScannerImplementation(input);
+            DealWithUI model = new DealWithUI();
             model.nOfErrors = scannerImplementation.nOfErrors;
             model.Tokens = scannerImplementation.outputTokensList;
             model.Errors = scannerImplementation.outputErrorsList;
-
-            string tkn = "";
-            for(int i = 0; i < model.Tokens.Count; i++)
-            {
-                tkn+= "Line: "+model.Tokens[i].line.ToString()+
-                    " Token text: "+ model.Tokens[i].keyword.ToString()+
-                    " Token type: "+ model.Tokens[i].returnToken.ToString()+
-                    "\n";
-            }
-            string error = "";
-            for (int i = 0; i < model.Errors.Count; i++)
-            {
-                error += "Line: " + model.Errors[i].line.ToString() +
-                    " Error text: " + model.Errors[i].keyword.ToString() +
-                    "\n";
-            }
-
-            return Content($"{tkn}\nTotal NO of errors: {model.nOfErrors}\n{error}");
+            return View(model);
         }
-                
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
