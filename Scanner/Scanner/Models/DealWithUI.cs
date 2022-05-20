@@ -4,7 +4,7 @@
     {
         public string text { get; set; }
         public int nOfErrors { get; set; }
-        public List<OutputItems> Tokens { get; set; }
-        public List<OutputItems> Errors { get; set; }
+        public List<TokenData> Tokens { get; set; }
+        public List<TokenData> Errors { get; set; }
     }
 }

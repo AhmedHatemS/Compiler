@@ -1,6 +1,6 @@
 ﻿namespace Scanner
 {
-    public class OutputItems
+    public class TokenData
     {
         public int line;
         public string keyword = "";

@@ -3,8 +3,8 @@
     public class ScannerImplementation
     {
         Dictionary<string, string> tokensTable = new Dictionary<string, string>();
-        public List<OutputItems> outputTokensList = new List<OutputItems>();
-        public List<OutputItems> outputErrorsList = new List<OutputItems>();
+        public List<TokenData> outputTokensList = new List<TokenData>();
+        public List<TokenData> outputErrorsList = new List<TokenData>();
         public string[,] transitionTable = new string[138, 59];        
         public string inputText = "";
         string checkedString = "";
@@ -612,9 +612,9 @@
             }
         }
 
-        private void AddToList(List<OutputItems> list, string keyword, string returnToken)
+        private void AddToList(List<TokenData> list, string keyword, string returnToken)
         {
-            OutputItems item = new OutputItems();
+            TokenData item = new TokenData();
             item.line = line;
             item.keyword = keyword;
             item.returnToken = returnToken;
@@ -726,7 +726,7 @@
         {
             return nOfErrors;
         }
-        public List<OutputItems> GetTokens()
+        public List<TokenData> GetTokens()
         {
             return outputTokensList;
         }
