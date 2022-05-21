@@ -1,0 +1,7 @@
+Hala	RE, Complete NFA E Closure, DFA, Transition Table, Context Grammar, First, Follow, Parser Table, Half of Parser Coding Phase
+Omnia	RE, Complete NFA E Closure, DFA, Scanner Coding Phase, Context Grammar, First, Follow, Parser Table, Half of Parser Coding Phase
+Rewaa	RE, Complete NFA E Closure, DFA, Context Grammar, First, Follow, Parser Table, Parser Coding Phase
+Ahmed	RE, 5 Small Conversions from RE to NFA to DFA, Complete Scanner Coding phase, Editor, Complete Parser Coding Phase
+Enji	RE, 5 Small Conversions from RE to NFA to DFA, NFA, First, Parse Tree, Abstract Parse Tree
+Yahia	RE, NFA, Context Free Grammar, First, Parse Tree, Abstract Parse Tree, Editor
+George	5 Small Conversions from RE to NFA to DFA
