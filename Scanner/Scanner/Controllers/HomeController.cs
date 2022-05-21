@@ -20,18 +20,44 @@ namespace Scanner.Controllers
         }
 
         [HttpPost, ValidateAntiForgeryToken]
-        public IActionResult Index(DealWithUI model)
+        public IActionResult Index(DealWithUI model, string ScanParse)
         {
-            return RedirectToAction("Scan", new {input = model.text});
+            if (ScanParse == "Scan")
+            {
+                return RedirectToAction("Scan", new { input = model.text });
+            }
+            return RedirectToAction("Parse", new {input = model.text});
         }
 
         public IActionResult Scan(string input)
         {
             ScannerImplementation scannerImplementation = new ScannerImplementation(input);
             DealWithUI model = new DealWithUI();
-            model.nOfErrors = scannerImplementation.nOfErrors;
-            model.Tokens = scannerImplementation.outputTokensList;
-            model.Errors = scannerImplementation.outputErrorsList;
+            model.nOfErrors = scannerImplementation.GetErrorsNum();
+            model.Tokens = scannerImplementation.GetTokensList();
+            model.Errors = scannerImplementation.GetErrorsList();
+            return View(model);
+        }
+        public IActionResult Parse(string input)
+        {
+            ScannerImplementation scannerImplementation = new ScannerImplementation(input);
+            DealWithUI model = new DealWithUI();
+            model.nOfErrors = scannerImplementation.GetErrorsNum();
+            model.Tokens = scannerImplementation.GetTokensList();
+            model.Errors = scannerImplementation.GetErrorsList();
+            
+            if(model.nOfErrors > 0)
+            {
+                return View(model);
+            }
+            else
+            {
+                ParserImplemintation parserImplemintation = new ParserImplemintation(scannerImplementation.GetTokens());
+                model.Accepted = parserImplemintation.GetAcceptanceState();
+                model.MatchedTokens = parserImplemintation.GetMatchedTokensList();
+                model.NotMatchedTokens = parserImplemintation.GetNotMatchedTokensList();
+            }
+
             return View(model);
         }
 

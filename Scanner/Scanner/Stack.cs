@@ -33,27 +33,22 @@ namespace Scanner
             }
         }
 
-        public bool Pop(ref string data)
+        public string Pop()
         {
             if (top < 0)
             {
-                return false;
+                return "";
             }
-            else
-            {
-                data = stack[top--];
-                return true;
-            }
+            return stack[top--];
         }
 
-        public bool GetTop(ref string data)
+        public string GetTop()
         {
             if (top >= 0)
             {
-                data = stack[top];
-                return true;
+                return stack[top];
             }
-            return false;
+            return "";
         }        
     }
 }

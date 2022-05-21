@@ -18,13 +18,11 @@ body {
 }
 
 textarea {
-    width: 50%;
-    resize: none !important;
+    width: 70%;
     height: 550px;
-}
-
-input {
+    resize: none !important;
     display: block;
+    margin: 1%;
     margin-left: auto;
     margin-right: auto;
 }

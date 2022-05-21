@@ -1,0 +1,70 @@
+﻿@model Scanner.Models.DealWithUI
+@{
+    ViewData["Title"] = "Parse result";
+}
+<div class="container row">
+    <div class="col-6 text-white" style="background-color:black; font-family:'Courier New'; padding:10px">
+        @if (Model != null)
+        {
+            foreach (var token in Model.Tokens)
+            {
+                <p>Line: @token.line</p>
+                <p>Token text: @token.keyword</p>
+                <p>Token type: @token.returnToken</p>
+                <hr />
+            }
+            foreach (var error in Model.Errors)
+            {
+                <p>Line: @error.line</p>
+                <p>Token text: @error.keyword</p>
+                <hr />
+            }
+            <p>Errors NO: @Model.nOfErrors</p>
+        }
+    </div>
+    <div class="col-6 text-white" style="background-color:black; font-family:'Courier New'; padding:10px">
+        @if(Model != null)
+        {
+            if (@Model.nOfErrors > 0)
+            {
+                <p>There are @Model.nOfErrors in scanner, can't run parser!</p>
+            }
+            else
+            {
+                if (Model.MatchedTokens.Count() > 0)
+                {
+                    int line = 0;
+                    <p>Matched lines:-</p>
+                    foreach (var token in Model.MatchedTokens)
+                    {
+                        if (line != @token.line)
+                        {
+                            <p>Line: @token.line</p>
+                            line++;
+                        }
+                        <p>Token type: @token.returnToken</p>                        
+                    }
+                    <hr />
+                }
+
+                if (Model.NotMatchedTokens.Count() > 0)
+                {
+                    foreach (var notMatched in Model.NotMatchedTokens)
+                    {
+                        <p>Line: @notMatched.line not matched.</p>
+                        <hr />
+                    }
+                }
+                
+                if (Model.Accepted == false)
+                {
+                    <p>Code not accepted.</p>
+                }
+                else
+                {
+                    <p>Code accepted.</p>
+                }
+            }
+        }
+    </div>
+</div>

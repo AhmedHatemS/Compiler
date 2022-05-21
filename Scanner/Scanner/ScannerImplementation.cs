@@ -3,12 +3,12 @@
     public class ScannerImplementation
     {
         Dictionary<string, string> tokensTable = new Dictionary<string, string>();
-        public List<TokenData> outputTokensList = new List<TokenData>();
-        public List<TokenData> outputErrorsList = new List<TokenData>();
-        public string[,] transitionTable = new string[138, 59];        
-        public string inputText = "";
+        List<TokenData> outputTokensList = new List<TokenData>();
+        List<TokenData> outputErrorsList = new List<TokenData>();
+        string[,] transitionTable = new string[138, 59];        
+        string inputText = "";
         string checkedString = "";
-        public int nOfErrors = 0;
+        int nOfErrors = 0;
         int line = 1, i=0, curr_state_row = 1, curr_transition_col = 1;
 
         public ScannerImplementation(string input)
@@ -17,7 +17,19 @@
             readTokensType();
             inputText = input+" ";
             Scan();
-        }      
+        }
+        public List<TokenData> GetTokensList()
+        {
+            return outputTokensList;
+        }
+        public List<TokenData> GetErrorsList()
+        {
+            return outputErrorsList;
+        }
+        public int GetErrorsNumber()
+        {
+            return nOfErrors;
+        }
         private void readTransitionTable()
              {
                  for(int i = 0; i < 138; i++)
