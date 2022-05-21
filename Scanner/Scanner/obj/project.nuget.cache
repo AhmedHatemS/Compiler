@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SQmoDP0MiomZ26+oPqqyBwZWqGkamSPAgUM595ZJsSTZemP44ntA1NQCDnv2285fMtvMv5INEgxsaAkm+40lwA==",
+  "dgSpecHash": "RS0sllue3cKl2czGCqMKqtHNjJ+pZDX6/AVRbX5AjJjklY4MZxw6hKLfTO4Dlsp4wPelNblviOnydVefmTFLYg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\devah\\Desktop\\Compiler\\Scanner\\Scanner\\Scanner.csproj",
+  "projectFilePath": "C:\\Users\\devah\\Desktop\\Compiler\\Scanner\\Scanner\\Compiler.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\devah\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\devah\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

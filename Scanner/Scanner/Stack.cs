@@ -1,6 +1,6 @@
 ﻿using System; 
 
-namespace Scanner
+namespace Compiler
 {
     public class Stack
     {

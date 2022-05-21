@@ -8837,9 +8837,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\devah\\Desktop\\Compiler\\Scanner\\Scanner\\Scanner.csproj",
-      "projectName": "Scanner",
-      "projectPath": "C:\\Users\\devah\\Desktop\\Compiler\\Scanner\\Scanner\\Scanner.csproj",
+      "projectUniqueName": "C:\\Users\\devah\\Desktop\\Compiler\\Scanner\\Scanner\\Compiler.csproj",
+      "projectName": "Compiler",
+      "projectPath": "C:\\Users\\devah\\Desktop\\Compiler\\Scanner\\Scanner\\Compiler.csproj",
       "packagesPath": "C:\\Users\\devah\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\devah\\Desktop\\Compiler\\Scanner\\Scanner\\obj\\",
       "projectStyle": "PackageReference",

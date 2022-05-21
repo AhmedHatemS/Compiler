@@ -1,4 +1,4 @@
-﻿namespace Scanner
+﻿namespace Compiler
 {
     public class ParserImplemintation
     {

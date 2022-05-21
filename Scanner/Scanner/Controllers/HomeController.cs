@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Scanner.Models;
+using Compiler.Models;
 using System.Diagnostics;
 
-namespace Scanner.Controllers
+namespace Compiler.Controllers
 {
     public class HomeController : Controller
     {

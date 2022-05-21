@@ -1,4 +1,4 @@
-﻿namespace Scanner.Models
+﻿namespace Compiler.Models
 {
     public class DealWithUI
     {
