@@ -3,7 +3,7 @@
     ViewData["Title"] = "Parse result";
 }
 <div class="container row">
-    <div class="col-6 text-white" style="background-color:black; font-family:'Courier New'; padding:10px">
+    <div class="col-5 text-white" style="background-color:black; font-family:'Courier New'; padding:10px">
         @if (Model != null)
         {
             foreach (var token in Model.Tokens)
@@ -22,7 +22,8 @@
             <p>Errors NO: @Model.nOfErrors</p>
         }
     </div>
-    <div class="col-6 text-white" style="background-color:black; font-family:'Courier New'; padding:10px">
+    <div class="col-2"></div>
+    <div class="col-5 text-white" style="background-color:black; font-family:'Courier New'; padding:10px">
         @if(Model != null)
         {
             if (@Model.nOfErrors > 0)
